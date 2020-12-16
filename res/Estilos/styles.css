@@ -1,0 +1,157 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    height: 720px;
+}
+
+#cabezera {
+    background: #112d4e;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    height: 20%;
+    font-weight: 400;
+}
+
+#cabezera .logo img {
+    width: 70px;
+    vertical-align: top;
+}
+
+#cabezera .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 4vw;
+    line-height: 85px;
+}
+
+#cabezera nav {
+    width: 50%;
+}
+
+nav a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.cuerpo {
+    background-color: #4F4F4F;
+    padding-right: 25px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row wrap;
+    height: 80%;
+    font-weight: 100;
+}
+
+aside {
+    display: flex;
+    flex-flow: column nowrap;
+    background: #3f72af;
+    font-size: 3.1vw;
+    align-items: center;
+    width: 20%;
+    color: white;
+    padding: 10px;
+}
+
+aside button {
+    font-weight: 100;
+    align-self: stretch;
+    padding: 5px;
+    transition-duration: 0.4s;
+    border: none;
+    outline: none;
+    font-size: 3vw;
+    background-color: #3f72af;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+aside button:hover {
+    color: black;
+}
+
+article {
+    background-color: #dbe2ef;
+    display: flex;
+    padding: 10px;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 80%;
+}
+
+form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.campos div {
+    padding: 20px;
+    text-align: center;
+}
+
+#botones {
+    align-self: center;
+}
+
+input {
+    padding: 4px;
+    margin: 3px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: center;
+    background-color: white;
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.tabla{
+    padding: 5px;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    flex-flow: row nowrap;
+    align-items: stretch;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #aaa;
+    margin-right: 0.5em;
+}
+
+input[type="date"]:focus:before, input[type="date"]:valid:before {
+    content: "";
+}
