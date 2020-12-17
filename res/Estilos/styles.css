@@ -3,7 +3,7 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    
+    overflow-x: hidden;
 }
 
 .contenedor {
@@ -91,8 +91,8 @@ article {
     background-color: #dbe2ef;
     display: flex;
     padding: 10px;
-    flex-flow: column nowrap;
-    align-items: center;
+    flex-direction: column;
+    
     width: 80%;
 }
 
@@ -120,7 +120,7 @@ input {
 
 table {
     border-collapse: collapse;
-    width: 80%;
+    width: 70%;
 }
 
 td, th {
@@ -132,14 +132,21 @@ td, th {
     padding-right: 50px;
 }
 
-.tabla{
+#radios{
+    padding: 0px;
+}
+
+.tabla {
     padding: 5px;
     overflow: auto;
     display: flex;
     justify-content: center;
     width: 90%;
     flex-flow: row nowrap;
-    align-items: stretch;
+}
+
+.info {
+    overflow: auto;
 }
 
 tr:nth-child(even) {

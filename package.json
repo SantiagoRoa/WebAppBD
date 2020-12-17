@@ -2,7 +2,7 @@
   "name": "webappbd",
   "version": "1.0.0",
   "description": "Web app for a DB",
-  "main": "index.html",
+  "main": "index.php",
   "scripts": {
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1",

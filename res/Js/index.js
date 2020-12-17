@@ -5,7 +5,6 @@ window.onload = function () { //Funciones a cargar despu√©s de la carga de la p√
 
 function cargarBotones() {
     id("b_crear").addEventListener("click", crear);
-    id("b_leer").addEventListener("click", leer);
     id("b_actualizar").addEventListener("click", actualizar);
     id("b_borrar").addEventListener("click", borrar);
     id("b_Tzonas").addEventListener("click", mostrarTabla);
@@ -79,6 +78,7 @@ function ocultarTablas() {
     let fClientes = id("f_clientes");
     let fArticulos = id("f_articulos");
     let fPedidos = id("f_pedidos");
+
     tZonas.style.display = 'none';
     fZonas.style.display = 'none';
     tClientes.style.display = 'none';
@@ -89,21 +89,36 @@ function ocultarTablas() {
     fPedidos.style.display = 'none';
 }
 
-function crear() {
-    console.log("1");
-
+function comprobarcheck() {
+    let t_zonas = id("b_Tzonas");
+    let t_clientes = id("b_Tclientes");
+    let t_pedidos = id("b_Tpedidos");
+    let t_articulos = id("b_Tarticulos");
+    if (t_zonas.checked) {
+        return 1;
+    } else if (t_clientes.checked) {
+        return 2;
+    } else if (t_pedidos.checked) {
+        return 3;
+    } else if (t_articulos.checked) {
+        return 4;
+    }
 }
 
-function leer() {
 
+function crear(tabla) {
+    $("#ident").val(1);
+    $("#formulario").submit();
 }
 
-function actualizar() {
-
+function actualizar(tabla) {
+    $("#ident").val(2);
+    $("#formulario").submit();
 }
 
-function borrar() {
-
+function borrar(tabla) {
+    $("#ident").val(3);
+    $("#formulario").submit();
 }
 
 //Funciones miscelaneas
