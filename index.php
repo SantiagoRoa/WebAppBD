@@ -16,11 +16,6 @@ $queryPedidos = $BD->prepare($tabla_pedidos);
 $queryPedidos->execute();
 ?>
 
-
-<div>
-
-</div>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -78,7 +73,7 @@ $queryPedidos->execute();
                             <input type="text" id="desc_zonas" name="desc_zonas" placeholder="Descripción">
                         </div>
                         <div id="f_clientes" ">
-                            <input type="text" id="cod_clien" name="cod_clien" placeholder="Código Cliente">
+                            <input type=" text" id="cod_clien" name="cod_clien" placeholder="Código Cliente">
                             <input type="text" id="nombre_clien" name="nombre_clien" placeholder="Nombre">
                             <input type="text" id="dir_clien" name="dir_clien" placeholder="Dirección">
                             <input type="text" id="postal_clien" name="postal_clien" placeholder="Código Postal">
@@ -113,7 +108,7 @@ $queryPedidos->execute();
                                 while ($fila = $queryZonas->fetch()) {
                                 ?>
                                     <tr>
-                                        <td><input type="radio" id="radio_zona" name="radio_zona" value="<?php print $fila["zona"] ?>"></td>
+                                        <td><input type="radio" id="radio_zona" name="radio_zona" value="<?php print $fila["zona"] ?>" checked></td>
                                         <td> <?php print($fila["zona"]) ?> </td>
                                         <td> <?php print($fila["descripcion"]) ?> </td>
                                     </tr>
@@ -140,7 +135,7 @@ $queryPedidos->execute();
                                 while ($fila = $queryClientes->fetch()) {
                                 ?>
                                     <tr>
-                                        <td><input type="radio" id="radio_clientes" name="radio_clientes" value="<?php print $fila["id"] ?>"></td>
+                                        <td><input type="radio" id="radio_clientes" name="radio_clientes" value="<?php print $fila["id"] ?>" checked></td>
                                         <td> <?php print($fila["id"]) ?> </td>
                                         <td> <?php print($fila["nombre"]) ?> </td>
                                         <td> <?php print($fila["direccion"]) ?> </td>
@@ -170,7 +165,7 @@ $queryPedidos->execute();
                                 while ($fila = $queryPedidos->fetch()) {
                                 ?>
                                     <tr>
-                                        <td><input type="radio" id="radio_pedidos" name="radio_pedidos" value="<?php print $fila["id"] ?>"></td>
+                                        <td><input type="radio" id="radio_pedidos" name="radio_pedidos" value="<?php print $fila["id"] ?>" checked></td>
                                         <td> <?php print($fila["id"]) ?> </td>
                                         <td> <?php print($fila["cod_cliente"]) ?> </td>
                                         <td> <?php print($fila["cod_articulo"]) ?> </td>
@@ -194,7 +189,7 @@ $queryPedidos->execute();
                                 while ($fila = $queryArticulos->fetch()) {
                                 ?>
                                     <tr>
-                                        <td><input type="radio" id="radio_articulos" name="radio_articulos" value="<?php print $fila["id"] ?>"></td>
+                                        <td><input type="radio" id="radio_articulos" name="radio_articulos" value="<?php print $fila["id"] ?>" checked></td>
                                         <td> <?php print($fila["id"]) ?> </td>
                                         <td> <?php print($fila["nombre"]) ?> </td>
                                         <td> <?php print($fila["precio"]) ?> </td>

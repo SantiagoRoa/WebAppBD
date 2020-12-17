@@ -89,6 +89,47 @@ function ocultarTablas() {
     fPedidos.style.display = 'none';
 }
 
+function comprobarCampos() {
+    let a = document.forms["formulario"]["id_zonas"].value;
+    let b = document.forms["formulario"]["desc_zonas"].value;
+
+    let c = document.forms["formulario"]["cod_clien"].value;
+    let d = document.forms["formulario"]["nombre_clien"].value;
+    let e = document.forms["formulario"]["dir_clien"].value;
+    let f = document.forms["formulario"]["postal_clien"].value;
+    let g = document.forms["formulario"]["ciudad_clien"].value;
+    let h = document.forms["formulario"]["tel_clien"].value;
+    let i = document.forms["formulario"]["email_clien"].value;
+    let j = document.forms["formulario"]["desc_clien"].value;
+    let k = document.forms["formulario"]["zonaV_clien"].value;
+
+    let l = document.forms["formulario"]["num_ped"].value;
+    let m = document.forms["formulario"]["num_clien"].value;
+    let o = document.forms["formulario"]["num_artic"].value;
+    let p = document.forms["formulario"]["unidades"].value;
+    let q = document.forms["formulario"]["fecha_ped"].value;
+
+    let r = document.forms["formulario"]["cod_artic"].value;
+    let s = document.forms["formulario"]["desc_artic"].value;
+    let t = document.forms["formulario"]["precio_artic"].value;
+    switch (comprobarcheck()) {
+        case 1:
+            if (a == null || a == "" || b == null || b == "") return false;
+            break;
+        case 2:
+            if (c == null || c == "" || d == null || d == "" || e == null || e == "" || f == null || f == "" ||
+                g == null || g == "" || h == null || h == "" || i == null || i == "" || j == null || j == "" || k == null || k == "") return false;
+            break;
+        case 3:
+            if (l == null || l == "" || m == null || m == "" || o == null || o == "" || p == null || p == "" || q == null || q == "") return false;
+            break;
+        case 4:
+            if (r == null || r == "" || s == null || s == "" || t == null || t == "") return false;
+            break;
+    }
+    return true;
+}
+
 function comprobarcheck() {
     let t_zonas = id("b_Tzonas");
     let t_clientes = id("b_Tclientes");
@@ -107,13 +148,17 @@ function comprobarcheck() {
 
 
 function crear(tabla) {
-    $("#ident").val(1);
-    $("#formulario").submit();
+    if (comprobarCampos()) {
+        $("#ident").val(1);
+        $("#formulario").submit();
+    } else alert("Debe llenar todos los campos");
 }
 
 function actualizar(tabla) {
-    $("#ident").val(2);
-    $("#formulario").submit();
+    if (comprobarCampos()) {
+        $("#ident").val(2);
+        $("#formulario").submit();
+    } else alert("Debe llenar todos los campos");
 }
 
 function borrar(tabla) {
